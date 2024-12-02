@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Advanced Multi-Functional Calculator</h1>
+    </header>
+    <main>
+        <section class="menu">
+            <button onclick="showSection('basic')">Basic Calculator</button>
+            <button onclick="showSection('quadratic')">Quadratic Equation Solver</button>
+            <button onclick="showSection('statistics')">Statistics Calculator</button>
+            <button onclick="showSection('herons')">Heron\'s Formula</button>
+            <button onclick="showSection('geometry')">Geometry Calculator</button>
+        </section>
+        <section id="basic" class="calculator-section hidden">
+            <h2>Basic Calculator</h2>
+            <input type="number" id="basic-a" placeholder="Enter first number">
+            <input type="number" id="basic-b" placeholder="Enter second number">
+            <select id="basic-operation">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+            <button onclick="calculateBasic()">Calculate</button>
+            <p id="basic-result"></p>
+        </section>
+        <section id="quadratic" class="calculator-section hidden">
+            <h2>Quadratic Equation Solver</h2>
+            <input type="number" id="quad-a" placeholder="Enter a">
+            <input type="number" id="quad-b" placeholder="Enter b">
+            <input type="number" id="quad-c" placeholder="Enter c">
+            <button onclick="solveQuadratic()">Solve</button>
+            <p id="quad-result"></p>
+        </section>
+        <section id="statistics" class="calculator-section hidden">
+            <h2>Statistics Calculator</h2>
+            <input type="text" id="stats-data" placeholder="Enter numbers separated by spaces">
+            <button onclick="calculateStatistics()">Calculate</button>
+            <p id="stats-result"></p>
+        </section>
+        <section id="herons" class="calculator-section hidden">
+            <h2>Heron\'s Formula</h2>
+            <input type="number" id="herons-a" placeholder="Enter side a">
+            <input type="number" id="herons-b" placeholder="Enter side b">
+            <input type="number" id="herons-c" placeholder="Enter side c">
+            <button onclick="calculateHerons()">Calculate Area</button>
+            <p id="herons-result"></p>
+        </section>
+        <section id="geometry" class="calculator-section hidden">
+            <h2>Geometry Calculator</h2>
+            <select id="geometry-type">
+                <option value="sphere">Sphere</option>
+                <option value="cylinder">Cylinder</option>
+                <option value="cone">Cone</option>
+                <option value="cube">Cube</option>
+                <option value="cuboid">Cuboid</option>
+            </select>
+            <div id="geometry-inputs">
+                <input type="number" id="radius" placeholder="Enter radius">
+                <input type="number" id="height" placeholder="Enter height (if applicable)">
+                <input type="number" id="length" placeholder="Enter length (if applicable)">
+                <input type="number" id="width" placeholder="Enter width (if applicable)">
+            </div>
+            <button onclick="calculateGeometry()">Calculate</button>
+            <p id="geometry-result"></p>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Advanced Multi-Functional Calculator</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
